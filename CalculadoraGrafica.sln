@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraGrafica.WinApp", "CalculadoraGrafica.WinApp\CalculadoraGrafica.WinApp.csproj", "{C7D1EB6B-FFC3-4430-87E2-F6A74DA86FCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7D1EB6B-FFC3-4430-87E2-F6A74DA86FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D1EB6B-FFC3-4430-87E2-F6A74DA86FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D1EB6B-FFC3-4430-87E2-F6A74DA86FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D1EB6B-FFC3-4430-87E2-F6A74DA86FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7DE8B5B-4792-4B05-B5B0-AAAA6880A609}
+	EndGlobalSection
+EndGlobal
