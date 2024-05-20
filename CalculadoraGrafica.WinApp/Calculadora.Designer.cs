@@ -64,6 +64,7 @@ namespace CalculadoraGrafica.WinApp
             panelCabecalho = new Panel();
             splitter1 = new Splitter();
             buttonMinimizar = new Button();
+            textBoxHistoricoAtual = new TextBox();
             panelCabecalho.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,10 +74,10 @@ namespace CalculadoraGrafica.WinApp
             TxtBEntrada.BorderStyle = BorderStyle.None;
             TxtBEntrada.Font = new Font("Segoe UI Semibold", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TxtBEntrada.ForeColor = Color.White;
-            TxtBEntrada.Location = new Point(2, 103);
+            TxtBEntrada.Location = new Point(6, 119);
             TxtBEntrada.Multiline = true;
             TxtBEntrada.Name = "TxtBEntrada";
-            TxtBEntrada.Size = new Size(317, 56);
+            TxtBEntrada.Size = new Size(310, 60);
             TxtBEntrada.TabIndex = 0;
             TxtBEntrada.Text = "0";
             TxtBEntrada.TextAlign = HorizontalAlignment.Right;
@@ -412,6 +413,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN1.TabIndex = 2;
             buttonN1.Text = "1";
             buttonN1.UseVisualStyleBackColor = false;
+            buttonN1.Click += buttonN1_Click;
             // 
             // buttonN2
             // 
@@ -594,6 +596,20 @@ namespace CalculadoraGrafica.WinApp
             buttonMinimizar.UseVisualStyleBackColor = false;
             buttonMinimizar.Click += buttonMinimizar_Click;
             // 
+            // textBoxHistoricoAtual
+            // 
+            textBoxHistoricoAtual.BackColor = Color.FromArgb(31, 31, 31);
+            textBoxHistoricoAtual.BorderStyle = BorderStyle.None;
+            textBoxHistoricoAtual.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxHistoricoAtual.ForeColor = Color.FromArgb(50, 50, 50);
+            textBoxHistoricoAtual.Location = new Point(6, 88);
+            textBoxHistoricoAtual.Multiline = true;
+            textBoxHistoricoAtual.Name = "textBoxHistoricoAtual";
+            textBoxHistoricoAtual.Size = new Size(310, 36);
+            textBoxHistoricoAtual.TabIndex = 0;
+            textBoxHistoricoAtual.TextAlign = HorizontalAlignment.Right;
+            textBoxHistoricoAtual.TextChanged += textBox1_TextChanged;
+            // 
             // TelaCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -627,6 +643,7 @@ namespace CalculadoraGrafica.WinApp
             Controls.Add(buttonC);
             Controls.Add(buttonCE);
             Controls.Add(lblTipoDaCalculadora);
+            Controls.Add(textBoxHistoricoAtual);
             Controls.Add(TxtBEntrada);
             DoubleBuffered = true;
             ForeColor = Color.FromArgb(31, 31, 31);
@@ -679,5 +696,6 @@ namespace CalculadoraGrafica.WinApp
         private Panel panelCabecalho;
         private Button buttonMinimizar;
         private Splitter splitter1;
+        private TextBox textBoxHistoricoAtual;
     }
 }
