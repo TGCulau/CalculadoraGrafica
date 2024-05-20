@@ -72,16 +72,17 @@ namespace CalculadoraGrafica.WinApp
             // 
             TxtBEntrada.BackColor = Color.FromArgb(31, 31, 31);
             TxtBEntrada.BorderStyle = BorderStyle.None;
+            TxtBEntrada.Cursor = Cursors.IBeam;
             TxtBEntrada.Font = new Font("Segoe UI Semibold", 35.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TxtBEntrada.ForeColor = Color.White;
-            TxtBEntrada.Location = new Point(6, 119);
+            TxtBEntrada.Location = new Point(6, 112);
             TxtBEntrada.Multiline = true;
             TxtBEntrada.Name = "TxtBEntrada";
             TxtBEntrada.Size = new Size(310, 60);
             TxtBEntrada.TabIndex = 0;
             TxtBEntrada.Text = "0";
             TxtBEntrada.TextAlign = HorizontalAlignment.Right;
-            TxtBEntrada.TextChanged += textBox1_TextChanged;
+            TxtBEntrada.TextChanged += TxtBEntrada_TextChanged;
             // 
             // lblTipoDaCalculadora
             // 
@@ -174,6 +175,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN7.TabIndex = 2;
             buttonN7.Text = "7";
             buttonN7.UseVisualStyleBackColor = false;
+            buttonN7.Click += buttonN7_Click;
             // 
             // buttonXQuadrado
             // 
@@ -191,6 +193,7 @@ namespace CalculadoraGrafica.WinApp
             buttonXQuadrado.Size = new Size(76, 52);
             buttonXQuadrado.TabIndex = 2;
             buttonXQuadrado.UseVisualStyleBackColor = false;
+            buttonXQuadrado.Click += buttonXQuadrado_Click;
             // 
             // buttonRaizQuadrada
             // 
@@ -208,6 +211,7 @@ namespace CalculadoraGrafica.WinApp
             buttonRaizQuadrada.Size = new Size(76, 52);
             buttonRaizQuadrada.TabIndex = 2;
             buttonRaizQuadrada.UseVisualStyleBackColor = false;
+            buttonRaizQuadrada.Click += buttonRaizQuadrada_Click;
             // 
             // buttonDivisao
             // 
@@ -225,6 +229,7 @@ namespace CalculadoraGrafica.WinApp
             buttonDivisao.Size = new Size(76, 52);
             buttonDivisao.TabIndex = 2;
             buttonDivisao.UseVisualStyleBackColor = false;
+            buttonDivisao.Click += buttonDivisao_Click;
             // 
             // buttonMultiplicacao
             // 
@@ -242,6 +247,7 @@ namespace CalculadoraGrafica.WinApp
             buttonMultiplicacao.TabIndex = 2;
             buttonMultiplicacao.Text = "X";
             buttonMultiplicacao.UseVisualStyleBackColor = false;
+            buttonMultiplicacao.Click += buttonMultiplicacao_Click;
             // 
             // buttonSubtracao
             // 
@@ -260,6 +266,7 @@ namespace CalculadoraGrafica.WinApp
             buttonSubtracao.Text = "  -";
             buttonSubtracao.TextAlign = ContentAlignment.TopLeft;
             buttonSubtracao.UseVisualStyleBackColor = false;
+            buttonSubtracao.Click += buttonSubtracao_Click;
             // 
             // buttonAdicao
             // 
@@ -278,6 +285,7 @@ namespace CalculadoraGrafica.WinApp
             buttonAdicao.Text = "+";
             buttonAdicao.TextAlign = ContentAlignment.TopCenter;
             buttonAdicao.UseVisualStyleBackColor = false;
+            buttonAdicao.Click += buttonAdicao_Click;
             // 
             // buttonResultado
             // 
@@ -294,6 +302,7 @@ namespace CalculadoraGrafica.WinApp
             buttonResultado.Text = "=";
             buttonResultado.TextAlign = ContentAlignment.TopCenter;
             buttonResultado.UseVisualStyleBackColor = false;
+            buttonResultado.Click += buttonResultado_Click;
             // 
             // buttonN8
             // 
@@ -311,6 +320,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN8.TabIndex = 2;
             buttonN8.Text = "8";
             buttonN8.UseVisualStyleBackColor = false;
+            buttonN8.Click += buttonN8_Click;
             // 
             // buttonN9
             // 
@@ -328,6 +338,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN9.TabIndex = 2;
             buttonN9.Text = "9";
             buttonN9.UseVisualStyleBackColor = false;
+            buttonN9.Click += buttonN9_Click;
             // 
             // buttonFracao
             // 
@@ -362,6 +373,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN4.TabIndex = 2;
             buttonN4.Text = "4";
             buttonN4.UseVisualStyleBackColor = false;
+            buttonN4.Click += buttonN4_Click;
             // 
             // buttonN5
             // 
@@ -379,6 +391,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN5.TabIndex = 2;
             buttonN5.Text = "5";
             buttonN5.UseVisualStyleBackColor = false;
+            buttonN5.Click += buttonN5_Click;
             // 
             // buttonN6
             // 
@@ -396,6 +409,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN6.TabIndex = 2;
             buttonN6.Text = "6";
             buttonN6.UseVisualStyleBackColor = false;
+            buttonN6.Click += buttonN6_Click;
             // 
             // buttonN1
             // 
@@ -431,6 +445,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN2.TabIndex = 2;
             buttonN2.Text = "2";
             buttonN2.UseVisualStyleBackColor = false;
+            buttonN2.Click += buttonN2_Click;
             // 
             // buttonN3
             // 
@@ -448,6 +463,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN3.TabIndex = 2;
             buttonN3.Text = "3";
             buttonN3.UseVisualStyleBackColor = false;
+            buttonN3.Click += buttonN3_Click;
             // 
             // buttonN0
             // 
@@ -465,6 +481,7 @@ namespace CalculadoraGrafica.WinApp
             buttonN0.TabIndex = 2;
             buttonN0.Text = "0";
             buttonN0.UseVisualStyleBackColor = false;
+            buttonN0.Click += buttonN0_Click;
             // 
             // buttonInverterSinal
             // 
@@ -600,15 +617,16 @@ namespace CalculadoraGrafica.WinApp
             // 
             textBoxHistoricoAtual.BackColor = Color.FromArgb(31, 31, 31);
             textBoxHistoricoAtual.BorderStyle = BorderStyle.None;
-            textBoxHistoricoAtual.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBoxHistoricoAtual.ForeColor = Color.FromArgb(50, 50, 50);
-            textBoxHistoricoAtual.Location = new Point(6, 88);
+            textBoxHistoricoAtual.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            textBoxHistoricoAtual.ForeColor = Color.FromArgb(140, 143, 151);
+            textBoxHistoricoAtual.Location = new Point(6, 93);
             textBoxHistoricoAtual.Multiline = true;
             textBoxHistoricoAtual.Name = "textBoxHistoricoAtual";
+            textBoxHistoricoAtual.ReadOnly = true;
             textBoxHistoricoAtual.Size = new Size(310, 36);
-            textBoxHistoricoAtual.TabIndex = 0;
+            textBoxHistoricoAtual.TabIndex = 1;
             textBoxHistoricoAtual.TextAlign = HorizontalAlignment.Right;
-            textBoxHistoricoAtual.TextChanged += textBox1_TextChanged;
+            textBoxHistoricoAtual.TextChanged += TxtBEntrada_TextChanged;
             // 
             // TelaCalculadora
             // 
