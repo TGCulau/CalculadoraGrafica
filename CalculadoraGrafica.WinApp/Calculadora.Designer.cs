@@ -356,6 +356,7 @@ namespace CalculadoraGrafica.WinApp
             buttonFracao.Size = new Size(76, 52);
             buttonFracao.TabIndex = 2;
             buttonFracao.UseVisualStyleBackColor = false;
+            buttonFracao.Click += buttonFracao_Click;
             // 
             // buttonN4
             // 
@@ -623,7 +624,7 @@ namespace CalculadoraGrafica.WinApp
             textBoxHistoricoAtual.Multiline = true;
             textBoxHistoricoAtual.Name = "textBoxHistoricoAtual";
             textBoxHistoricoAtual.ReadOnly = true;
-            textBoxHistoricoAtual.Size = new Size(310, 36);
+            textBoxHistoricoAtual.Size = new Size(295, 36);
             textBoxHistoricoAtual.TabIndex = 1;
             textBoxHistoricoAtual.TextAlign = HorizontalAlignment.Right;
             textBoxHistoricoAtual.TextChanged += TxtBEntrada_TextChanged;

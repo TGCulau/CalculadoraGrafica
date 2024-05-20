@@ -108,12 +108,12 @@ namespace CalculadoraGrafica.WinApp
             TxtBEntrada.DeselectAll();
             int posicaoCursor = TxtBEntrada.SelectionStart;
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(TxtBEntrada.Text, "[0-9]$"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(TxtBEntrada.Text, "[0-9,]$"))
             {
                 AuxiliarDoTXTBox = TxtBEntrada.Text;
             }
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(TxtBEntrada.Text, "[^0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(TxtBEntrada.Text, "[^0-9,]"))
             {
                 if (TxtBEntrada.Text == "0")
                 {
@@ -296,16 +296,26 @@ namespace CalculadoraGrafica.WinApp
             textBoxHistoricoAtual.Text = textoDoHitoricoAtual;
             valorDaRaiz = Math.Sqrt(valorDaRaiz);
             TxtBEntrada.Text = Convert.ToString(valorDaRaiz);
-
         }
         private void buttonXQuadrado_Click(object sender, EventArgs e)
         {
-
+            double valorAoQuadrado = Convert.ToDouble(TxtBEntrada.Text);
+            textoDoHitoricoAtual = $"sqr({valorAoQuadrado})";
+            textBoxHistoricoAtual.Text = textoDoHitoricoAtual;
+            valorAoQuadrado = valorAoQuadrado * valorAoQuadrado;
+            TxtBEntrada.Text = Convert.ToString(valorAoQuadrado);
         }
-
+        private void buttonFracao_Click(object sender, EventArgs e)
+        {
+            double valorDividioPorUm = Convert.ToDouble(TxtBEntrada.Text);
+            textoDoHitoricoAtual = $"1/({valorDividioPorUm})";
+            textBoxHistoricoAtual.Text = textoDoHitoricoAtual;
+            valorDividioPorUm = 1.0 / valorDividioPorUm;
+            TxtBEntrada.Text = Convert.ToString(valorDividioPorUm);
+        }
         #endregion
 
-        #region Resultados
+        #region Botao Igual
         private void buttonResultado_Click(object sender, EventArgs e)
         {
             if (eAdicao)
@@ -402,6 +412,7 @@ namespace CalculadoraGrafica.WinApp
             eSubtracao = true;
         }
         #endregion
+
 
 
         
